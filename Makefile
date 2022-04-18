@@ -7,14 +7,9 @@
 CC = gcc
 
 # define any compile-time flags
-#CFLAGS := -I/usr/include/python3.7m -Wall -Wextra -g -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O3
-CFLAGS := -I/usr/local/include/python3.9  -Wno-unused-result -Wsign-compare  -DNDEBUG -g -fwrapv -O3 -Wall
+CFLAGS := -I/usr/local/include/python3.8  -Wno-unused-result -Wsign-compare  -DNDEBUG -g -fwrapv -O3 -Wall
 
-# define library paths in addition to /usr/lib
-#   if I wanted to include libraries not in /usr/lib I'd specify
-#   their path using -Lpath, something like:
-LFLAGS = -L/usr/local/lib/python3.9/config-3.9-x86_64-linux-gnu -L/usr/local/lib  -lcrypt -lpthread -ldl  -lutil -lm -lpython3.9
-#LFLAGS = -L/usr/lib/python3.7/config-3.7m-x86_64-linux-gnu -L/usr/lib -lpython3.7m -lcrypt -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
+LFLAGS := -L/usr/local/lib/python3.8/config-3.8-x86_64-linux-gnu -L/usr/local/lib  -lcrypt -lpthread -ldl  -lutil -lm -lpython3.8 
 # define output directory
 OUTPUT	:= output
 
